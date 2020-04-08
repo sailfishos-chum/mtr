@@ -21,6 +21,7 @@ BuildRequires: autoconf
 BuildRequires: automake
 Requires: ncurses-libs
 Requires: libstdc++
+#Conflicts: mtr
 
 %description
 mtr combines the functionality of the 'traceroute' and 'ping' programs in a
