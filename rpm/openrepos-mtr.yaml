@@ -1,0 +1,50 @@
+Name: openrepos-mtr
+Summary: my traceroute, an advanced traceroute utility
+Version: 0.94
+Release: 1
+Group: Applications/Internet
+License: GPL
+URL: https://github.com/traviscross/mtr
+Sources:
+    - https://github.com/traviscross/%{upstream_name}/archive/v%{version}.tar.gz
+Description: |
+    mtr combines the functionality of the 'traceroute' and 'ping' programs in a
+    single network diagnostic tool.
+    
+    As mtr starts, it investigates the network connection between the host mtr runs
+    on and a user-specified destination host. After it determines the address of
+    each network hop between the machines, it sends a sequence of ICMP ECHO
+    requests to each one to determine the quality of the link to each machine. As
+    it does this, it prints running statistics about each machine.
+
+Macros:
+  - 'upstream_name;mtr'
+RequiresPost:
+    - libcap
+Requires:
+    - ncurses-libs
+    - libstdc++
+PkgConfigBR:
+    - ncursesw
+PkgBR:
+    - autoconf
+    - automake
+SetupOptions: '-q -n %{upstream_name}-%{version}'
+Configure: configure
+ConfigOptions:
+    - -q -C
+    - --program-prefix=openrepos-
+    - --disable-bash-completion
+    - --without-gtk
+    - --enable-ipv6
+Builder: none
+Files:
+    - "%defattr(-, root, root, 0755)"
+    - "%license COPYING"
+    - "%{_sbindir}/%{name}"
+    - "%{_sbindir}/%{name}-packet"
+    - #%%defattr(-, root, root, 0644)
+    - #%%{_datadir}/icons/hicolor/86x86/apps/%%{name}.png
+    - #%%{_datadir}/icons/hicolor/108x108/apps/%%{name}.png
+    - #%%{_datadir}/icons/hicolor/256x256/apps/%%{name}.png
+    - #%%{_datadir}/applications/%%{name}.desktop
