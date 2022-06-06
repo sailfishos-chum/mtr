@@ -1,4 +1,4 @@
-Name: openrepos-mtr
+Name: mytraceroute
 Summary: my traceroute, an advanced traceroute utility
 Version: 0.94
 Release: 1
@@ -21,6 +21,12 @@ Macros:
   - 'upstream_name;mtr'
 RequiresPost:
     - libcap
+Obsoletes:
+   - openrepos-mtr <= %{version}
+Provides:
+   - openrepos-mtr = %{version}
+Conflicts:
+   - openrepos-mtr
 Requires:
     - ncurses-libs
     - libstdc++
@@ -29,22 +35,13 @@ PkgConfigBR:
 PkgBR:
     - autoconf
     - automake
-SetupOptions: '-q -n %{upstream_name}-%{version}'
-Configure: configure
+SetupOptions: '-q -n %{name}-%{version}/upstream'
 ConfigOptions:
     - -q -C
-    - --program-prefix=openrepos-
-    - --disable-bash-completion
     - --without-gtk
     - --enable-ipv6
 Builder: none
 Files:
     - "%defattr(-, root, root, 0755)"
     - "%license COPYING"
-    - "%{_sbindir}/%{name}"
-    - "%{_sbindir}/%{name}-packet"
-    - #%%defattr(-, root, root, 0644)
-    - #%%{_datadir}/icons/hicolor/86x86/apps/%%{name}.png
-    - #%%{_datadir}/icons/hicolor/108x108/apps/%%{name}.png
-    - #%%{_datadir}/icons/hicolor/256x256/apps/%%{name}.png
-    - #%%{_datadir}/applications/%%{name}.desktop
+    - "%{_sbindir}/*"
