@@ -42,10 +42,10 @@ it does this, it prints running statistics about each machine.
 %setup -q -n %{name}-%{version}/upstream
 
 # >> setup
-%__aclocal $ACLOCAL_OPTS
-%__autoheader
-%__automake --add-missing --copy --foreign
-%__autoconf --force
+aclocal $ACLOCAL_OPTS
+autoheader
+automake --add-missing --copy --foreign
+autoconf --force
 
 # << setup
 
@@ -60,13 +60,14 @@ it does this, it prints running statistics about each machine.
 
 
 # >> build post
-make %{?_smp_mflags}
+#make %%{?_smp_mflags}
+%make_build
 # << build post
 
 %install
 rm -rf %{buildroot}
 # >> install pre
-%{__make} install-sbinPROGRAMS DESTDIR="%{buildroot}"
+make install-sbinPROGRAMS DESTDIR="%{buildroot}"
 #%%make_install
 # << install pre
 
