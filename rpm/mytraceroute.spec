@@ -38,6 +38,19 @@ each network hop between the machines, it sends a sequence of ICMP ECHO
 requests to each one to determine the quality of the link to each machine. As
 it does this, it prints running statistics about each machine.
 
+%if "%{?vendor}" == "chum"
+PackageName: MyTraceroute
+Type: console-application
+PackagerName: nephros
+Categories:
+ - Network
+ - Utility
+Custom:
+  PackagingRepo: https://gitlab.com/nephros/openrepos-mtr
+  Repo: https://github.com/traviscross/mtr
+Icon: https://gitlab.com/nephros/openrepos-mtr/tree/obs/raw/mtr_icon_sailfish.png
+%endif
+
 
 %prep
 %setup -q -n %{name}-%{version}/upstream
