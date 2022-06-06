@@ -13,7 +13,7 @@ Summary:    my traceroute, an advanced traceroute utility
 Version:    0.95
 Release:    1
 Group:      Applications/Internet
-License:    GPL
+License:    GPLv2
 URL:        https://github.com/traviscross/mtr
 Source0:    %{name}-%{version}.tar.gz
 Source100:  mytraceroute.yaml
