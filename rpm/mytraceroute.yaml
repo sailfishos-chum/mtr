@@ -42,9 +42,6 @@ Provides:
    - '%{upstream_name} = %{version}'
 Conflicts:
    - openrepos-mtr
-Requires:
-    - ncurses-libs
-    - libstdc++
 PkgConfigBR:
     - ncursesw
 PkgBR:
