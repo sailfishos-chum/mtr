@@ -15,7 +15,7 @@ Release:    1
 Group:      Applications/Internet
 License:    GPL
 URL:        https://github.com/traviscross/mtr
-Source0:    https://github.com/traviscross/%{upstream_name}/archive/v%{version}.tar.gz
+Source0:    %{name}-%{version}.tar.gz
 Source100:  mytraceroute.yaml
 Requires:   ncurses-libs
 Requires:   libstdc++

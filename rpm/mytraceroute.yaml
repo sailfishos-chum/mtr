@@ -6,7 +6,8 @@ Group: Applications/Internet
 License: GPL
 URL: https://github.com/traviscross/mtr
 Sources:
-    - https://github.com/traviscross/%{upstream_name}/archive/v%{version}.tar.gz
+    # https://github.com/traviscross/%{upstream_name}/archive/v%{version}.tar.gz
+    - '%{name}-%{version}.tar.gz'
 Description: |
     mtr combines the functionality of the 'traceroute' and 'ping' programs in a
     single network diagnostic tool.
