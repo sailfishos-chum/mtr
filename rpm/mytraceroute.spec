@@ -24,8 +24,9 @@ BuildRequires:  pkgconfig(ncursesw)
 BuildRequires:  autoconf
 BuildRequires:  automake
 Provides:   openrepos-mtr = %{version}
+Provides:   %{upstream_name} = %{version}
 Conflicts:   openrepos-mtr
-Obsoletes:   openrepos-mtr <= %{version}
+Obsoletes:   openrepos-mtr < %{version}
 
 %description
 mtr combines the functionality of the 'traceroute' and 'ping' programs in a

@@ -22,10 +22,12 @@ Macros:
   - 'upstream_name;mtr'
 RequiresPost:
     - libcap
+# legacy package
 Obsoletes:
-   - openrepos-mtr <= %{version}
+   - openrepos-mtr < %{version}
 Provides:
    - openrepos-mtr = %{version}
+   - '%{upstream_name} = %{version}'
 Conflicts:
    - openrepos-mtr
 Requires:
