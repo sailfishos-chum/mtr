@@ -10,7 +10,7 @@ Name:       mytraceroute
 %define upstream_name mtr
 
 Summary:    my traceroute, an advanced traceroute utility
-Version:    0.94
+Version:    0.95
 Release:    1
 Group:      Applications/Internet
 License:    GPL
