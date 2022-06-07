@@ -46,7 +46,7 @@ Categories:
 Custom:
   PackagingRepo: https://gitlab.com/nephros/openrepos-mtr
   Repo: https://github.com/traviscross/mtr
-Icon: https://gitlab.com/nephros/openrepos-mtr/tree/obs/raw/mtr_icon_sailfish.png
+Icon: https://gitlab.com/nephros/openrepos-mtr/-/raw/obs/mtr_icon.png
 %endif
 
 
