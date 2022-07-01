@@ -1,3 +1,6 @@
+* Fri Jul  1 2022 Nephros <sailfish@nephros.org> - 0.95-2
+- move packaging repo to sailfishos-chum
+
 * Mon Jun  6 2022 Nephros <sailfish@nephros.org> - 0.95-1
 - move to OBS/chum
 

@@ -11,7 +11,7 @@ Name:       mytraceroute
 
 Summary:    my traceroute, an advanced traceroute utility
 Version:    0.95
-Release:    1
+Release:    2
 Group:      Applications/Internet
 License:    GPLv2
 URL:        https://github.com/traviscross/mtr
@@ -37,16 +37,16 @@ requests to each one to determine the quality of the link to each machine. As
 it does this, it prints running statistics about each machine.
 
 %if "%{?vendor}" == "chum"
-PackageName: MyTraceroute
+PackageName: MyTraceRoute (mtr)
 Type: console-application
 PackagerName: nephros
 Categories:
  - Network
  - Utility
 Custom:
-  PackagingRepo: https://gitlab.com/nephros/openrepos-mtr
   Repo: https://github.com/traviscross/mtr
-Icon: https://gitlab.com/nephros/openrepos-mtr/-/raw/obs/mtr_icon.png
+  PackagingRepo: https://github.com/sailfishos-chum/mtr
+Icon: https://github.com/sailfishos-chum/mtr/raw/master/mtr_icon_sailfish.png
 %endif
 
 
